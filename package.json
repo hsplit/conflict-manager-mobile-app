@@ -1,7 +1,7 @@
 {
   "name": "conflict-manager-android",
+  "version": "0.0.2",
   "description": "git conflict manager client for android",
-  "version": "0.0.1",
   "private": true,
   "keywords": [
     "git",
@@ -10,6 +10,8 @@
   "author": "H.Split",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "dev": "react-native run-android",
+    "build:apk": "cd android && gradlew assembleRelease",
     "test": "jest"
   },
   "dependencies": {
