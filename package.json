@@ -1,6 +1,6 @@
 {
   "name": "conflict-manager-android",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "git conflict manager client for android",
   "private": true,
   "keywords": [

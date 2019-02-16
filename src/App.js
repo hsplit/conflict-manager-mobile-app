@@ -24,18 +24,18 @@ export default class App extends Component {
       token,
     }, () => {
       if (this.state.connectionStatus !== 'Connected') {
-        this.getConflicts()
+        this.getConflicts(true)
       }
     })
   }
 
-  getConflicts = () => {
+  getConflicts = (isInit = false) => {
     if (this.state.connectionStatus !== 'Connected') {
       this.setState({
         connectionStatus: 'Loading...',
       })
     }
-    getStatus(this.state.api, this.state.token)
+    getStatus(this.state.api, this.state.token, isInit)
       .then(data => {
         this.setState({
           connectionStatus: 'Connected',

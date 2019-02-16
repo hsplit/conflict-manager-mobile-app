@@ -1,4 +1,4 @@
-export const getStatus = (api, token) => fetch(`${api}/mystatus`, { headers: { token } })
+export const getStatus = (api, token, isInit) => fetch(`${api}/connection/mystatus/${isInit}`, { headers: { token } })
   .then(res => {
     if (!res.ok) {
       if (res.status === 423) {
